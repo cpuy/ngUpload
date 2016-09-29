@@ -76,7 +76,7 @@ angular.module('ngUpload', [])
     }
 
     function getCsrfTokenValue() {
-        return $browser.cookies()[$http.defaults.xsrfCookieName];
+        return $browser.cookies()[$http.defaults.xsrfCookieName || 'X-XSRF-TOKEN'];
     }
 
     return {
